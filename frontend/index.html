@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Add Book Form -->
+    <form id="add-book-form">
+      <h2>Add Book</h2>
+      <input type="text" id="title" placeholder="Book Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="genre" placeholder="Genre" required>
+      <input type="number" id="price" placeholder="Price" required>
+      <textarea id="description" placeholder="Description" required></textarea>
+      <button type="submit">Add Book</button>
+    </form>
+
+    <!-- Edit Book Form -->
+    <form id="edit-book-form" style="display: none;">
+      <h2>Edit Book</h2>
+      <input type="text" id="edit-title" placeholder="Book Title" required>
+      <input type="text" id="edit-author" placeholder="Author" required>
+      <input type="text" id="edit-genre" placeholder="Genre" required>
+      <input type="number" id="edit-price" placeholder="Price" required>
+      <textarea id="edit-description" placeholder="Description" required></textarea>
+      <button type="button" id="update-book-btn">Update Book</button>
+      <button type="button" id="cancel-edit-btn">Cancel</button>
+    </form>
+
+    <!-- Book List -->
+    <div id="book-list"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

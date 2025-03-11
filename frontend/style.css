@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Book List Section */
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  padding: 0;
+  justify-items: center;
+}
+
+/* Book Card Styling */
+.book-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-card button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.book-card button:active {
+  transform: scale(1);
+}
+
+.book-card .delete-btn {
+  background-color: #f44336;
+}
+
+.book-card .delete-btn:hover {
+  background-color: #e53935;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4CAF50;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button[type="submit"]:active,
+button[type="button"]:active {
+  transform: scale(1);
+}
+
+/* Edit Form Cancel Button */
+#cancel-edit-btn {
+  background-color: #f44336;
+}
+
+#cancel-edit-btn:hover {
+  background-color: #e53935;
+}
+
+/* Error Messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Heading Styles */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  #book-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #add-book-form,
+  #edit-book-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  button[type="submit"],
+  button[type="button"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.container {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.book-card {
+  animation: fadeIn 1s ease-out;
+}
